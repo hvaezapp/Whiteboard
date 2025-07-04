@@ -22,8 +22,15 @@ The app supports multiple device connections, allowing users to collaborate from
 
 - .NET 9
 
-### Run the Application
+### Setup
 
-```bash
-git clone https://github.com/your-username/whiteboard.git
-dotnet run
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/hvaezapp/Whiteboard.git
+
+2. Run :
+
+   ```bash
+   dotnet build
+   dotnet run
