@@ -10,7 +10,22 @@
     <link href="~/css/site.css" rel="stylesheet" />
 }
 
-<canvas id="whiteboard" width="800" height="600"></canvas>
+<div>
+    <div id="tools">
+        <input type="color" id="colorPicker" />
+        <select id="fontSizeSelect">
+            <option value="12" selected>12px</option>
+            <option value="14">14px</option>
+            <option value="16">16px</option>
+            <option value="20">20px</option>
+            <option value="24">24px</option>
+            <option value="30">30px</option>
+        </select>
+    </div>
+    <div>
+        <canvas id="whiteboard" width="800" height="600"></canvas>
+    </div>
+</div>
 
 @section Scripts
 {
