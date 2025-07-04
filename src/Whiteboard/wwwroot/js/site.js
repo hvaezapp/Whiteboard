@@ -1,4 +1,21 @@
-﻿
+﻿var connection = new signalR.HubConnectionBuilder()
+    .withUrl("/board").build();
+
+connection.start().catch(function (err) {
+    return console.error(err.toString());
+});
+
+connection.on("OnDrawingAsync", (x1, y1, x2, y2) => {
+    ctx.lineWidth = 5;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = '#000000';
+
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    ctx.closePath();
+});
 
 const canvas = document.getElementById('whiteboard');
 const ctx = canvas.getContext('2d');
@@ -32,6 +49,13 @@ function draw(e) {
     ctx.beginPath();
     ctx.moveTo(x, y);
 
+    connection.invoke("DrawingAsync", x1, y1, x, y)
+        .catch(function (err) {
+            return console.error(err.toString());
+        });
+
+    x1 = x;
+    y1 = y;
 }
 
 canvas.addEventListener('mousedown', startPosition);
