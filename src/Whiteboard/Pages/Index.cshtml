@@ -2,7 +2,7 @@
 @model IndexModel
 
 @{
-    ViewData["Title"] = "Board";
+    ViewData["Title"] = "Whiteboard";
 }
   
 @section Styles
@@ -10,5 +10,10 @@
     <link href="~/css/site.css" rel="stylesheet" />
 }
 
-<canvas id="whiteboard" width="2000" height="800"></canvas>
+<canvas id="whiteboard" width="800" height="600"></canvas>
 
+
+@section Scripts
+{
+   <script src="~/js/site.js"></script>
+}
