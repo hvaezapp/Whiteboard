@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**WhiteBoard** is a real-time collaborative whiteboard application built with **SignalR** on .NET 9. It enables multiple users to draw, write, and share ideas together on a shared canvas — all in real time.
+**WhiteBoard** is a real-time collaborative whiteboard application built with **SignalR** on ASP.Net Core 9. It enables multiple users to draw, write, and share ideas together on a shared canvas — all in real time.
 
 As soon as a user draws or makes changes, updates are instantly broadcast to all connected participants, ensuring a seamless and synchronized collaboration experience. Powered by SignalR, the app offers low-latency, bi-directional communication across clients. This makes WhiteBoard an ideal tool for brainstorming sessions, design discussions, online teaching, or any interactive group activity.
 
